@@ -5,9 +5,6 @@ A simple Rock-Paper-Scissors game built using Flask.
 ## Table of Contents
 - [Features](#features)
 - [How to Run](#how-to-run)
-- [Screenshots](#screenshots)
-- [Technologies Used](#technologies-used)
-- [License](#license)
 
 ## Features
 - **User vs. Computer**: Play against the computer in a classic game of Rock-Paper-Scissors.
