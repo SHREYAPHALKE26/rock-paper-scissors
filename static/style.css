@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* General Styles */
+body {
+  background: #f4f4f4;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: darkcyan;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* Username Form */
+.username-form {
+  background: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.username-form label {
+  font-size: 1.2em;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.username-form input {
+  padding: 0.5em;
+  font-size: 1em;
+  width: 80%;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.username-form button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background: darkcyan;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.username-form button:hover {
+  background: #006666;
+}
+
+/* Game Container */
+.game-container {
+  background: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.message {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: darkcyan;
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.computer img,
+.player img {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+
+.computer img:hover,
+.player img:hover {
+  transform: scale(1.1);
+}
+
+.computer p,
+.player p {
+  margin-top: 1em;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.points {
+  font-size: 1.5em;
+  margin: 1em 0;
+  color: #333;
+}
+
+.computerPoints,
+.playerPoints {
+  font-weight: bold;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 2em 0;
+}
+
+.options button {
+  background: darkcyan;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.options button:hover {
+  background: #006666;
+}
+
+.result-message {
+  font-size: 1.5em;
+  margin: 1em 0;
+  color: darkcyan;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.reset-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.reset-container button {
+  background: #ff4d4d;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  padding: 0.8em 1.5em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.reset-container button:hover {
+  background: #cc0000;
+}

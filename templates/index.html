@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% if not username %}
+    <div class="username-form">
+        <h1>Welcome to Rock-Paper-Scissors!</h1>
+        <form method="POST">
+            <label for="username">Enter your name:</label>
+            <input type="text" id="username" name="username" required>
+            <button type="submit">Start Game</button>
+        </form>
+    </div>
+    {% else %}
+    <div class="game-container">
+        <div class="message">Choose your move, {{ username }}!</div>
+        <div class="images">
+            <div class="computer">
+                <img src="{{ url_for('static', filename=computer_choice + 'Computer.png') if computer_choice else url_for('static', filename='STONEComputer.png') }}" alt="Computer Choice">
+                <p>Computer</p>
+            </div>
+            <div class="player">
+                <img src="{{ url_for('static', filename=user_choice + 'Player.png') if user_choice else url_for('static', filename='STONEPlayer.png') }}" alt="Player Choice">
+                <p>{{ username }}</p>
+            </div>
+        </div>
+        <div class="points">
+            <span class="computerPoints">{{ computer_score }}</span>
+            <span class="playerPoints">{{ user_score }}</span>
+        </div>
+        <div class="options">
+            <form method="POST">
+                <input type="hidden" name="username_hidden" value="{{ username }}">
+                <button type="submit" name="choice" value="STONE">STONE</button>
+                <button type="submit" name="choice" value="PAPER">PAPER</button>
+                <button type="submit" name="choice" value="SCISSORS">SCISSORS</button>
+            </form>
+        </div>
+
+        {% if result %}
+            <div class="result-message">{{ result }}</div>
+        {% endif %}
+
+        <div class="reset-container">
+            <form method="POST" action="/reset">
+                <button type="submit">Reset Scores</button>
+            </form>
+        </div>
+    </div>
+    {% endif %}
+</body>
+</html>
